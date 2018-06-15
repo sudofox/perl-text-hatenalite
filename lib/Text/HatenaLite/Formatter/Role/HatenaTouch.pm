@@ -11,7 +11,7 @@ BEGIN {
 }
 
 sub hatena_id_to_url {
-    return q<http://www.hatena.ne.jp/touch/> . $_[1] . q</>;
+    return q<http://profile.hatena.ne.jp/touch/> . $_[1] . q</>;
 }
 
 sub dkeyword_to_link_url {

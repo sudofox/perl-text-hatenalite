@@ -25,11 +25,11 @@ sub percent_decode_b ($) {
 }
 
 sub hatena_id_to_url {
-    return q<http://www.hatena.ne.jp/> . $_[1] . q</>;
+    return q<http://profile.hatena.ne.jp/> . $_[1] . q</>;
 }
 
 sub hatena_id_to_icon_url {
-    return q<http://n.hatena.com/> . $_[1] . q</profile/image.gif?type=icon&size=16>;
+    return q<https://cdn.profile-image.st-hatena.com/users/> . $_[1] . q</profile_s.gif> . time();
 }
 
 sub id_notation_to_url_name_for_id_call {
@@ -162,12 +162,12 @@ sub nicovideo_id_to_thumbnail_url {
 
 sub youtube_id_to_url {
     my ($self, $vid) = @_;
-    return sprintf q<http://www.youtube.com/watch?v=%s>, $vid;
+    return sprintf q<https://www.youtube.com/watch?v=%s>, $vid;
 }
 
 sub youtube_id_to_thumbnail_url {
     my ($self, $vid) = @_;
-    return sprintf q<http://i4.ytimg.com/vi/%s/default.jpg>, $vid;
+    return sprintf q<https://i4.ytimg.com/vi/%s/default.jpg>, $vid;
 }
 
 sub image_url_filter { $_[1] }
